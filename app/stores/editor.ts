@@ -93,7 +93,7 @@ export const useEditor = defineStore('editor', () => {
   }
 
   // Keep the edit list across reloads of the same document (this tab only).
-  const storageKey = () => (model.value ? `pdf-editor:ops:${model.value.id}` : '')
+  const storageKey = () => (model.value ? `littlenote:ops:${model.value.id}` : '')
   watch(ops, (list) => {
     const key = storageKey()
     if (!key || !import.meta.client) return

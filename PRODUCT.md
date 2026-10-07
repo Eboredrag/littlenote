@@ -32,11 +32,13 @@ A single document at a time, often on a phone. The user arrives with a file, edi
 - v1: read per-run font info (raw name, family, embedded/subset, font type, size, weight/style, color); edit existing text blocks; restyle (font, size, color, bold/italic); add new text boxes; delete, rotate and reorder pages; undo/redo; download.
 - Read-only in v1: Type3 fonts, scanned/image text (no OCR), right-to-left and vertical text.
 - An edited block collapses mixed runs into its dominant style; unedited blocks keep everything.
-- MuPDF.js is AGPL-3.0: public hosting requires publishing source or a commercial Artifex license (open decision).
+- MuPDF.js is AGPL-3.0, so the app is AGPL-3.0 too; decided: published at github.com/Eboredrag/littlenote and linked from the site.
 
 ## Brand Commitments
 
-None yet. Name and branding are undecided; do not invent a name, claims, customers or statistics.
+- Name: **littlenote** (always lowercase), at littlenote.io. Confirmed by the user.
+- Source: github.com/Eboredrag/littlenote, AGPL-3.0.
+- Do not invent claims, customers or statistics.
 
 ## Evidence on Hand
 

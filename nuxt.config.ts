@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   app: {
     head: {
-      title: 'PDF editor',
+      title: 'littlenote',
       htmlAttrs: { lang: 'en' },
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content' },
@@ -27,10 +27,10 @@ export default defineNuxtConfig({
     public: {
       // Public link to this app's source code, required by the AGPL when hosted.
       // Override with NUXT_PUBLIC_SOURCE_URL when running a fork.
-      sourceUrl: 'https://github.com/Eboredrag/pdf-editor',
-      // The public address of the site, e.g. https://pdf.example.com (NUXT_PUBLIC_SITE_URL).
-      // Used for canonical links, link previews and the sitemap; the request's own origin is used when unset.
-      siteUrl: '',
+      sourceUrl: 'https://github.com/Eboredrag/littlenote',
+      // The public address of the site (NUXT_PUBLIC_SITE_URL), used for canonical links,
+      // link previews and the sitemap. Empty means "use the request's own origin".
+      siteUrl: 'https://littlenote.io',
     },
   },
   routeRules: {

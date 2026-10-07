@@ -1,17 +1,40 @@
+# Run with:  docker compose up -d --build
+# Settings come from a `.env` file next to this one (see .env.example).
+
 services:
-  pdf-editor:
+  littlenote:
     build: .
-    ports:
-      - "3000:3000"
+    # Only Caddy talks to the app; it isn't published on the server's own ports.
+    expose:
+      - "3000"
     environment:
-      # Public source link (AGPL). Defaults to github.com/Eboredrag/pdf-editor; set it if you run a changed fork.
-      NUXT_PUBLIC_SOURCE_URL: ${NUXT_PUBLIC_SOURCE_URL:-https://github.com/Eboredrag/pdf-editor}
-      # The public address, e.g. https://pdf.example.com (canonical links, previews, sitemap).
-      NUXT_PUBLIC_SITE_URL: ${NUXT_PUBLIC_SITE_URL:-}
+      # The public address (canonical links, link previews, sitemap), derived from DOMAIN.
+      NUXT_PUBLIC_SITE_URL: https://${DOMAIN:-localhost}
+      # Public source link (AGPL). Defaults to github.com/Eboredrag/littlenote; set it if you run a changed fork.
+      NUXT_PUBLIC_SOURCE_URL: ${NUXT_PUBLIC_SOURCE_URL:-https://github.com/Eboredrag/littlenote}
     volumes:
       # Uploads being edited; each is deleted 30 minutes after its last use.
       - uploads:/data
     restart: unless-stopped
 
+  caddy:
+    image: caddy:2
+    depends_on:
+      - littlenote
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      DOMAIN: ${DOMAIN:-localhost}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      # Certificates live here, so restarts don't request new ones.
+      - caddy_data:/data
+      - caddy_config:/config
+    restart: unless-stopped
+
 volumes:
   uploads:
+  caddy_data:
+  caddy_config:

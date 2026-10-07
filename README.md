@@ -1,4 +1,4 @@
-# PDF editor
+# littlenote
 
 Open a PDF in the browser, see exactly which font, size and colour every piece of text uses, change the words (or restyle them, add text, rotate/reorder/delete pages) and download a new PDF that looks untouched.
 
@@ -19,13 +19,30 @@ bun run build && bun run preview   # production server on Bun
 
 No database is needed: uploads are plain files, kept for 30 minutes after their last use.
 
-### Docker
+### On a DigitalOcean droplet (or any Ubuntu server)
+
+1. Create an Ubuntu droplet (1 vCPU / 1 GB is enough) and note its IP address.
+2. At your domain's DNS provider, add an **A record** pointing your domain (e.g. `littlenote.io`) at that IP.
+3. SSH in as root and run, with your domain:
+
+   ```sh
+   curl -fsSL https://raw.githubusercontent.com/Eboredrag/littlenote/main/scripts/setup-server.sh | DOMAIN=littlenote.io bash
+   ```
+
+   It adds 2 GB of swap, installs Docker, opens only SSH/HTTP/HTTPS in the firewall, clones this repository to `/opt/littlenote`, writes `.env` and starts everything. The first build takes a few minutes.
+4. Open `https://littlenote.io`. Caddy fetches the HTTPS certificate on the first visit (and keeps retrying until the DNS record is live).
+
+To update later, run the same command again: it pulls the latest code and restarts.
+
+### With Docker anywhere
+
+Copy `.env.example` to `.env`, set `DOMAIN`, then:
 
 ```sh
-NUXT_PUBLIC_SITE_URL=https://pdf.example.com docker compose up -d --build
+docker compose up -d --build
 ```
 
-The image (`Dockerfile`) builds with Bun and ships only the built server on `oven/bun:1.3-slim`, running as the unprivileged `bun` user on port 3000. Uploads are stored on the `/data` volume, and a health check polls the home page.
+Two containers start: the app (built with Bun, running as the unprivileged `bun` user, uploads on the `uploads` volume, with a health check) and [Caddy](https://caddyserver.com) in front of it on ports 80/443. Caddy gets and renews the HTTPS certificate for `DOMAIN` by itself (`Caddyfile`) and allows 50 MB uploads. Without a `DOMAIN` it serves `https://localhost` with a local certificate.
 
 ### Without Docker
 
@@ -33,10 +50,11 @@ Copy `.output/` to the server and run `bun .output/server/index.mjs`. It needs n
 
 | Setting | Default | Purpose |
 | --- | --- | --- |
+| `DOMAIN` (Docker only, in `.env`) | `localhost` | Your domain; Caddy gets its certificate, and the site address is derived from it |
 | `PORT` / `HOST` | `3000` / all interfaces in Docker | Where the server listens |
 | `NUXT_UPLOADS_DIR` | `.data/uploads` (`/data/uploads` in Docker) | Where uploads are kept; use a persistent disk |
 | `NUXT_PUBLIC_SOURCE_URL` | this repository | Public source link, required by the AGPL when hosted; set it to your fork if you change the code |
-| `NUXT_PUBLIC_SITE_URL` | the request's own address | Public address (e.g. `https://pdf.example.com`) for canonical links, link previews and the sitemap |
+| `NUXT_PUBLIC_SITE_URL` | `https://littlenote.io` | Public address (e.g. `https://littlenote.io`) for canonical links, link previews and the sitemap |
 
 Run a single instance, or share the uploads folder between instances. If a proxy sits in front, allow 50 MB request bodies.
 
@@ -66,7 +84,7 @@ This app is free software under the **GNU Affero General Public License v3.0 or 
 What that means when you host it:
 
 - Anyone who uses your hosted copy must be able to get its complete source code, including your changes, under the same licence.
-- The source link points at [github.com/Eboredrag/pdf-editor](https://github.com/Eboredrag/pdf-editor). If you run a changed copy, publish your changes and set `NUXT_PUBLIC_SOURCE_URL` to your repository. The app then shows "Open source under the AGPL-3.0, click here to view the source" on the home page and in the Changes panel, linking to it. A production server without it logs a warning at startup.
+- The source link points at [github.com/Eboredrag/littlenote](https://github.com/Eboredrag/littlenote). If you run a changed copy, publish your changes and set `NUXT_PUBLIC_SOURCE_URL` to your repository. The app then shows "Open source under the AGPL-3.0, click here to view the source" on the home page and in the Changes panel, linking to it. A production server without it logs a warning at startup.
 - You may host it, charge for it, brand it and change it; you may not keep the code closed while offering it as a service.
 
 Third-party parts keep their own licences:

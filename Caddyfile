@@ -1,0 +1,12 @@
+# HTTPS in front of the app. Caddy gets and renews the certificate for $DOMAIN by itself;
+# the domain's DNS must point at this server and ports 80 and 443 must be open.
+{$DOMAIN:localhost} {
+	encode zstd gzip
+
+	# Uploads are limited to 50 MB by the app; allow a little room for the form around the file.
+	request_body {
+		max_size 51MB
+	}
+
+	reverse_proxy littlenote:3000
+}

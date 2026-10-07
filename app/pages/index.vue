@@ -4,14 +4,14 @@ import { storeToRefs } from 'pinia'
 import { useUpload } from '~/stores/upload'
 
 const siteUrl = useSiteUrl()
-const title = 'Edit PDF text online, keep the original fonts · PDF editor'
+const title = 'Edit PDF text online, keep the original fonts · littlenote'
 const description = 'Fix a name, a date or a typo in your PDF and download it looking untouched, in the same fonts. No account; files are deleted after 30 minutes.'
 
 useSeoMeta({
   title,
   description,
   ogType: 'website',
-  ogSiteName: 'PDF editor',
+  ogSiteName: 'littlenote',
   ogTitle: 'Fix the words in your PDF',
   ogDescription: description,
   ogUrl: siteUrl('/'),
@@ -30,7 +30,7 @@ useHead({
     innerHTML: JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
-      'name': 'PDF editor',
+      'name': 'littlenote',
       'url': siteUrl('/'),
       description,
       'applicationCategory': 'UtilitiesApplication',
@@ -75,6 +75,10 @@ function submitPassword() {
 
 <template>
   <main class="intake">
+    <header class="brand">
+      <img src="/favicon.svg" alt="" width="32" height="32">
+      <span>littlenote</span>
+    </header>
     <div class="intro">
       <h1>Fix the words in your PDF</h1>
       <p class="lede">Change a name, a date or a typo. The page keeps its own fonts and layout wherever the file allows.</p>
@@ -126,7 +130,22 @@ function submitPassword() {
 </template>
 
 <style scoped>
+.brand {
+  position: absolute;
+  top: max(var(--space-5), env(safe-area-inset-top));
+  left: var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 1.375rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.brand img { display: block; border-radius: 9px; }
+
 .intake {
+  position: relative;
   min-height: 100dvh;
   display: grid;
   grid-template-columns: minmax(0, 30rem) minmax(0, 440px);
@@ -200,7 +219,8 @@ h2 { margin: 0; font-size: var(--text-lg); font-weight: 850; }
 .row { display: flex; gap: var(--space-2); flex-wrap: wrap; justify-content: center; }
 
 @media (max-width: 860px) {
-  .intake { grid-template-columns: minmax(0, 1fr); justify-items: center; align-content: start; gap: var(--space-6); padding-top: var(--space-6); }
+  .intake { grid-template-columns: minmax(0, 1fr); justify-items: center; align-content: start; gap: var(--space-6); padding-top: 96px; }
+  .brand { left: var(--space-4); top: max(var(--space-4), env(safe-area-inset-top)); }
   .intro { max-width: 34rem; }
   .sheet { max-width: 420px; aspect-ratio: auto; min-height: 340px; }
 }

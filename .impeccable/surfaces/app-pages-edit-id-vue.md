@@ -5,7 +5,7 @@ primary_target: "app/pages/edit/[id].vue"
 related_targets: ["app/pages/index.vue"]
 ---
 
-# Surface brief: PDF editor (editor route + upload route)
+# Surface brief: littlenote (editor route + upload route)
 
 Scope: `app/pages/edit/[id].vue` (editor) and `app/pages/index.vue` (upload), one world. Visitor mode: **Operate**.
 
@@ -27,4 +27,4 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 ## Unresolved
 
-- Product name (none yet; use a neutral descriptive title "PDF editor").
+- None. Product name confirmed by the user: "littlenote" (lowercase), at littlenote.io.

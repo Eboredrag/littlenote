@@ -1,5 +1,5 @@
 ---
-name: PDF editor
+name: littlenote
 description: A friendly fixer for PDFs you did not make; the page is the only big thing on screen.
 colors:
   ground: "#f6dccb"
@@ -142,7 +142,7 @@ components:
     height: "44px"
 ---
 
-# Design System: PDF editor
+# Design System: littlenote
 
 ## Overview
 

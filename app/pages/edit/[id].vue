@@ -16,7 +16,7 @@ const upload = useUpload()
 const wide = useWide()
 const id = computed(() => String(route.params.id))
 
-useHead({ title: () => (editor.model ? `${editor.model.name} · PDF editor` : 'PDF editor') })
+useHead({ title: () => (editor.model ? `${editor.model.name} · littlenote` : 'littlenote') })
 // Editing sessions are private: never indexed, and their address isn't sent to other sites.
 useSeoMeta({ robots: 'noindex, nofollow', referrer: 'no-referrer' })
 

@@ -1,5 +1,5 @@
 {
-  "name": "pdfviewer",
+  "name": "littlenote",
   "private": true,
   "type": "module",
   "packageManager": "bun@1.3.14",
