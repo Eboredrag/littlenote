@@ -1,0 +1,17 @@
+services:
+  pdf-editor:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      # Public source link (AGPL). Defaults to github.com/Eboredrag/pdf-editor; set it if you run a changed fork.
+      NUXT_PUBLIC_SOURCE_URL: ${NUXT_PUBLIC_SOURCE_URL:-https://github.com/Eboredrag/pdf-editor}
+      # The public address, e.g. https://pdf.example.com (canonical links, previews, sitemap).
+      NUXT_PUBLIC_SITE_URL: ${NUXT_PUBLIC_SITE_URL:-}
+    volumes:
+      # Uploads being edited; each is deleted 30 minutes after its last use.
+      - uploads:/data
+    restart: unless-stopped
+
+volumes:
+  uploads:

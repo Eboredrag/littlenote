@@ -1,0 +1,11 @@
+node_modules
+.nuxt
+.output
+.data
+.scratch
+.env
+.impeccable/live/sessions
+.impeccable/config.local.json
+.impeccable/review
+.impeccable/questions
+.impeccable/hook.cache.json

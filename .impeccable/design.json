@@ -1,0 +1,460 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T16:17:14.972Z",
+  "title": "Design System: PDF editor",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Apricot Ground",
+        "canonical": "#f6dccb",
+        "tonalRamp": [
+          "oklch(15% 0.037 55.3)",
+          "oklch(26% 0.037 55.3)",
+          "oklch(37% 0.037 55.3)",
+          "oklch(48% 0.037 55.3)",
+          "oklch(59% 0.037 55.3)",
+          "oklch(70% 0.037 55.3)",
+          "oklch(82% 0.037 55.3)",
+          "oklch(95% 0.037 55.3)"
+        ]
+      },
+      "ground-deep": {
+        "role": "neutral",
+        "displayName": "Deep Apricot",
+        "canonical": "#efc8b0",
+        "tonalRamp": [
+          "oklch(15% 0.055 53.4)",
+          "oklch(26% 0.055 53.4)",
+          "oklch(37% 0.055 53.4)",
+          "oklch(48% 0.055 53.4)",
+          "oklch(59% 0.055 53.4)",
+          "oklch(70% 0.055 53.4)",
+          "oklch(82% 0.055 53.4)",
+          "oklch(95% 0.055 53.4)"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Card White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(59% 0.000 89.9)",
+          "oklch(70% 0.000 89.9)",
+          "oklch(82% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "card-sunk": {
+        "role": "neutral",
+        "displayName": "Sunk Blush",
+        "canonical": "#fbf1ea",
+        "tonalRamp": [
+          "oklch(15% 0.014 57.6)",
+          "oklch(26% 0.014 57.6)",
+          "oklch(37% 0.014 57.6)",
+          "oklch(48% 0.014 57.6)",
+          "oklch(59% 0.014 57.6)",
+          "oklch(70% 0.014 57.6)",
+          "oklch(82% 0.014 57.6)",
+          "oklch(95% 0.014 57.6)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline Blush",
+        "canonical": "#f1e1d6",
+        "tonalRamp": [
+          "oklch(15% 0.023 56.9)",
+          "oklch(26% 0.023 56.9)",
+          "oklch(37% 0.023 56.9)",
+          "oklch(48% 0.023 56.9)",
+          "oklch(59% 0.023 56.9)",
+          "oklch(70% 0.023 56.9)",
+          "oklch(82% 0.023 56.9)",
+          "oklch(95% 0.023 56.9)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Rule Blush",
+        "canonical": "#e4cbbb",
+        "tonalRamp": [
+          "oklch(15% 0.036 54.7)",
+          "oklch(26% 0.036 54.7)",
+          "oklch(37% 0.036 54.7)",
+          "oklch(48% 0.036 54.7)",
+          "oklch(59% 0.036 54.7)",
+          "oklch(70% 0.036 54.7)",
+          "oklch(82% 0.036 54.7)",
+          "oklch(95% 0.036 54.7)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm Ink",
+        "canonical": "#2b1d16",
+        "tonalRamp": [
+          "oklch(15% 0.026 47.7)",
+          "oklch(26% 0.026 47.7)",
+          "oklch(37% 0.026 47.7)",
+          "oklch(48% 0.026 47.7)",
+          "oklch(59% 0.026 47.7)",
+          "oklch(70% 0.026 47.7)",
+          "oklch(82% 0.026 47.7)",
+          "oklch(95% 0.026 47.7)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Cocoa Grey",
+        "canonical": "#6e5243",
+        "tonalRamp": [
+          "oklch(15% 0.044 49.4)",
+          "oklch(26% 0.044 49.4)",
+          "oklch(37% 0.044 49.4)",
+          "oklch(48% 0.044 49.4)",
+          "oklch(59% 0.044 49.4)",
+          "oklch(70% 0.044 49.4)",
+          "oklch(82% 0.044 49.4)",
+          "oklch(95% 0.044 49.4)"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Faint Cocoa",
+        "canonical": "#87685a",
+        "tonalRamp": [
+          "oklch(15% 0.045 45.5)",
+          "oklch(26% 0.045 45.5)",
+          "oklch(37% 0.045 45.5)",
+          "oklch(48% 0.045 45.5)",
+          "oklch(59% 0.045 45.5)",
+          "oklch(70% 0.045 45.5)",
+          "oklch(82% 0.045 45.5)",
+          "oklch(95% 0.045 45.5)"
+        ]
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Press Ultramarine",
+        "canonical": "#3b34e6",
+        "tonalRamp": [
+          "oklch(15% 0.114 272.9)",
+          "oklch(26% 0.177 272.9)",
+          "oklch(37% 0.227 272.9)",
+          "oklch(48% 0.253 272.9)",
+          "oklch(59% 0.227 272.9)",
+          "oklch(70% 0.164 272.9)",
+          "oklch(82% 0.101 272.9)",
+          "oklch(95% 0.038 272.9)"
+        ]
+      },
+      "action-press": {
+        "role": "primary",
+        "displayName": "Deep Ultramarine",
+        "canonical": "#2c25c4",
+        "tonalRamp": [
+          "oklch(15% 0.104 271.8)",
+          "oklch(26% 0.161 271.8)",
+          "oklch(37% 0.207 271.8)",
+          "oklch(48% 0.230 271.8)",
+          "oklch(59% 0.207 271.8)",
+          "oklch(70% 0.150 271.8)",
+          "oklch(82% 0.092 271.8)",
+          "oklch(95% 0.035 271.8)"
+        ]
+      },
+      "action-tint": {
+        "role": "primary",
+        "displayName": "Ultramarine Wash",
+        "canonical": "rgb(59 52 230 / 0.1)",
+        "tonalRamp": [
+          "oklch(15% 0.114 272.9)",
+          "oklch(26% 0.177 272.9)",
+          "oklch(37% 0.227 272.9)",
+          "oklch(48% 0.253 272.9)",
+          "oklch(59% 0.227 272.9)",
+          "oklch(70% 0.164 272.9)",
+          "oklch(82% 0.101 272.9)",
+          "oklch(95% 0.038 272.9)"
+        ]
+      },
+      "action-tint-strong": {
+        "role": "primary",
+        "displayName": "Ultramarine Wash Strong",
+        "canonical": "rgb(59 52 230 / 0.18)",
+        "tonalRamp": [
+          "oklch(15% 0.114 272.9)",
+          "oklch(26% 0.177 272.9)",
+          "oklch(37% 0.227 272.9)",
+          "oklch(48% 0.253 272.9)",
+          "oklch(59% 0.227 272.9)",
+          "oklch(70% 0.164 272.9)",
+          "oklch(82% 0.101 272.9)",
+          "oklch(95% 0.038 272.9)"
+        ]
+      },
+      "on-action": {
+        "role": "primary",
+        "displayName": "On Ultramarine",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(59% 0.000 89.9)",
+          "oklch(70% 0.000 89.9)",
+          "oklch(82% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Upload headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Card titles: selected font name, drop-target title, empty and error states."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Panel headings (Pages, Changes); file name at 0.9375rem."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default interface text."
+      },
+      "body-sm": {
+        "displayName": "Small Body",
+        "purpose": "Notes, hints, toasts, product facts."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Button labels."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Metadata, badges, field labels, keep-until text. Sentence case."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card",
+        "value": "0 1px 2px rgb(73 35 14 / 0.06), 0 10px 28px -6px rgb(73 35 14 / 0.16)",
+        "purpose": "resting cards, the top pill."
+      },
+      {
+        "name": "float",
+        "value": "0 2px 4px rgb(73 35 14 / 0.08), 0 18px 40px -8px rgb(73 35 14 / 0.24)",
+        "purpose": "the bottom bar, selection card, sheets, toast, hint, dragged items."
+      },
+      {
+        "name": "page",
+        "value": "0 1px 3px rgb(73 35 14 / 0.1), 0 16px 40px -10px rgb(73 35 14 / 0.28)",
+        "purpose": "PDF pages and the upload paper sheet."
+      },
+      {
+        "name": "action-glow",
+        "value": "0 6px 16px -6px rgb(59 52 230 / 0.6)",
+        "purpose": "under the primary pill only."
+      },
+      {
+        "name": "selection-lift",
+        "value": "0 0 0 2px var(--action), 0 10px 22px -8px rgb(59 52 230 / 0.45)",
+        "purpose": "a selected text block."
+      }
+    ],
+    "motion": [
+      {
+        "name": "spring",
+        "value": "cubic-bezier(0.34, 1.32, 0.64, 1)",
+        "purpose": "Press feedback only: :active scale (0.97 buttons, 0.98 selected block, 0.94 swatches), 220-260ms. Never on entrances. Detector ignore in .impeccable/config.json is scoped to this use."
+      },
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Every entrance, lift and sheet rise (300-340ms); counter bump 420ms."
+      },
+      {
+        "name": "state",
+        "value": "160ms ease",
+        "purpose": "Background, colour and shadow changes on controls."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "All animation and transition durations collapse under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "editor-mobile",
+        "value": "720px"
+      },
+      {
+        "name": "upload-stack",
+        "value": "860px"
+      },
+      {
+        "name": "coarse-pointer",
+        "value": "(pointer: coarse)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The ultramarine pill; one per surface for the main action (Download, Choose a PDF).",
+      "html": "<button class=\"ds-btn ds-btn-primary\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 15V3\"/><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m7 10 5 5 5-5\"/></svg>Download</button>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; min-width:44px; padding:0 16px; border:0; border-radius:999px; background:transparent; color:var(--ink, #2b1d16); font-family:var(--font-ui, Nunito, ui-rounded, system-ui, sans-serif); font-weight:700; font-size:0.9375rem; line-height:1; cursor:pointer; transition: transform 220ms cubic-bezier(0.34, 1.32, 0.64, 1), background-color 160ms ease, color 160ms ease, box-shadow 160ms ease; } .ds-btn svg { width:20px; height:20px; flex:none; } .ds-btn:active { transform:scale(0.97); } .ds-btn:focus-visible { outline:3px solid var(--action, #3b34e6); outline-offset:2px; } .ds-btn-primary { background:var(--action, #3b34e6); color:var(--on-action, #fff); padding:0 24px; box-shadow:0 6px 16px -6px rgb(59 52 230 / 0.6); } .ds-btn-primary:hover { background:var(--action-press, #2c25c4); } .ds-btn-primary:disabled { background:var(--line-strong, #e4cbbb); color:var(--ink-2, #6e5243); box-shadow:none; cursor:not-allowed; transform:none; }"
+    },
+    {
+      "name": "Soft Button",
+      "kind": "button",
+      "refersTo": "button-soft",
+      "description": "Secondary action inside cards (Delete now, Cancel, Try again).",
+      "html": "<button class=\"ds-btn-soft\">Delete now</button>",
+      "css": ".ds-btn-soft { display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:0 16px; border:0; border-radius:999px; background:var(--card-sunk, #fbf1ea); color:var(--ink, #2b1d16); font-family:var(--font-ui, Nunito, ui-rounded, sans-serif); font-weight:700; font-size:0.9375rem; line-height:1; cursor:pointer; transition: transform 220ms cubic-bezier(0.34, 1.32, 0.64, 1), background-color 160ms ease; } .ds-btn-soft:hover { background:var(--line, #f1e1d6); } .ds-btn-soft:active { transform:scale(0.97); } .ds-btn-soft:focus-visible { outline:3px solid var(--action, #3b34e6); outline-offset:2px; }"
+    },
+    {
+      "name": "Toggle Button",
+      "kind": "button",
+      "refersTo": "button-on",
+      "description": "Ghost tool button; pressed state takes the ultramarine wash.",
+      "html": "<button class=\"ds-btn-tool\">Pages</button><button class=\"ds-btn-tool\" aria-pressed=\"true\">Add text</button>",
+      "css": ".ds-btn-tool { display:inline-flex; align-items:center; min-height:44px; padding:0 12px; border:0; border-radius:999px; background:transparent; color:var(--ink, #2b1d16); font-family:var(--font-ui, Nunito, ui-rounded, sans-serif); font-weight:700; font-size:0.9375rem; line-height:1; cursor:pointer; transition: transform 220ms cubic-bezier(0.34, 1.32, 0.64, 1), background-color 160ms ease, color 160ms ease; } .ds-btn-tool:hover { background:var(--card-sunk, #fbf1ea); } .ds-btn-tool:active { transform:scale(0.97); } .ds-btn-tool[aria-pressed=\"true\"] { background:rgb(59 52 230 / 0.1); color:var(--action, #3b34e6); } .ds-btn-tool:focus-visible { outline:3px solid var(--action, #3b34e6); outline-offset:2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Password and text entry.",
+      "html": "<input class=\"ds-input\" type=\"password\" placeholder=\"Password\">",
+      "css": ".ds-input { width:280px; min-height:48px; padding:0 16px; border:2px solid var(--line-strong, #e4cbbb); border-radius:14px; background:var(--card, #fff); color:var(--ink, #2b1d16); font-family:var(--font-ui, Nunito, ui-rounded, sans-serif); font-size:1.0625rem; } .ds-input::placeholder { color:var(--ink-3, #87685a); } .ds-input:focus-visible { outline:none; border-color:var(--action, #3b34e6); box-shadow:0 0 0 4px rgb(59 52 230 / 0.1); }"
+    },
+    {
+      "name": "Bottom Bar",
+      "kind": "nav",
+      "refersTo": "bottom-bar",
+      "description": "The one persistent editor toolbar, thumb-reachable, Download at the right.",
+      "html": "<nav class=\"ds-bar\"><button class=\"ds-bar-tool\">Pages</button><button class=\"ds-bar-tool\">Add text</button><span class=\"ds-bar-sep\"></span><button class=\"ds-bar-tool\">Undo</button><button class=\"ds-bar-tool ds-bar-changes\">Changes<span class=\"ds-bar-count\">3</span></button><button class=\"ds-bar-dl\">Download</button></nav>",
+      "css": ".ds-bar { display:inline-flex; align-items:center; gap:4px; padding:8px; min-height:72px; border-radius:28px; background:var(--card, #fff); box-shadow:0 2px 4px rgb(73 35 14 / 0.08), 0 18px 40px -8px rgb(73 35 14 / 0.24); font-family:var(--font-ui, Nunito, ui-rounded, sans-serif); } .ds-bar-tool { position:relative; min-height:44px; padding:0 12px; border:0; border-radius:999px; background:transparent; color:var(--ink, #2b1d16); font:inherit; font-weight:700; font-size:0.9375rem; cursor:pointer; transition: transform 220ms cubic-bezier(0.34, 1.32, 0.64, 1), background-color 160ms ease; } .ds-bar-tool:hover { background:var(--card-sunk, #fbf1ea); } .ds-bar-tool:active { transform:scale(0.97); } .ds-bar-tool:focus-visible, .ds-bar-dl:focus-visible { outline:3px solid var(--action, #3b34e6); outline-offset:2px; } .ds-bar-sep { width:1px; height:28px; margin:0 4px; background:var(--line-strong, #e4cbbb); } .ds-bar-changes { margin-right:6px; } .ds-bar-count { position:absolute; top:-3px; right:-6px; min-width:20px; height:20px; padding:0 5px; border-radius:10px; background:var(--action, #3b34e6); color:#fff; font-size:12px; font-weight:850; line-height:20px; box-shadow:0 0 0 2px #fff; } .ds-bar-dl { margin-left:8px; min-height:52px; padding:0 24px; border:0; border-radius:999px; background:var(--action, #3b34e6); color:#fff; font:inherit; font-weight:700; font-size:0.9375rem; box-shadow:0 6px 16px -6px rgb(59 52 230 / 0.6); cursor:pointer; transition: transform 220ms cubic-bezier(0.34, 1.32, 0.64, 1), background-color 160ms ease; } .ds-bar-dl:hover { background:var(--action-press, #2c25c4); } .ds-bar-dl:active { transform:scale(0.97); }"
+    },
+    {
+      "name": "Badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Font fact pills and panel counts.",
+      "html": "<span class=\"ds-badge\">Embedded</span> <span class=\"ds-badge\">Subset</span>",
+      "css": ".ds-badge { display:inline-block; padding:4px 10px; border-radius:999px; background:var(--card-sunk, #fbf1ea); color:var(--ink-2, #6e5243); font-family:var(--font-ui, Nunito, ui-rounded, sans-serif); font-size:0.8125rem; font-weight:750; }"
+    },
+    {
+      "name": "Status Note",
+      "kind": "custom",
+      "refersTo": "note-row",
+      "description": "Plain-language status row; font substitution adds a Deep Apricot ring. No extra hues.",
+      "html": "<p class=\"ds-note ds-note-swap\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 16v-4\"/><path d=\"M12 8h.01\"/></svg><span>This font is missing “é”, so the edit uses Liberation Sans.</span></p>",
+      "css": ".ds-note { display:flex; gap:8px; margin:0; padding:12px; max-width:320px; border-radius:14px; background:var(--card-sunk, #fbf1ea); color:var(--ink, #2b1d16); font-family:var(--font-ui, Nunito, ui-rounded, sans-serif); font-size:0.9375rem; line-height:1.45; } .ds-note svg { flex:none; width:18px; height:18px; margin-top:2px; color:var(--ink-2, #6e5243); } .ds-note-swap { box-shadow: inset 0 0 0 2px var(--ground-deep, #efc8b0); }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "The white floating container on the apricot ground.",
+      "html": "<div class=\"ds-ground\"><div class=\"ds-card\"><h3>Calibri Bold</h3><p>11 pt, black</p></div></div>",
+      "css": ".ds-ground { padding:24px; background:var(--ground, #f6dccb); } .ds-card { padding:16px 24px; background:var(--card, #fff); border-radius:20px; box-shadow:0 1px 2px rgb(73 35 14 / 0.06), 0 10px 28px -6px rgb(73 35 14 / 0.16); font-family:var(--font-ui, Nunito, ui-rounded, sans-serif); color:var(--ink, #2b1d16); } .ds-card h3 { margin:0; font-size:1.375rem; font-weight:850; letter-spacing:-0.01em; line-height:1.2; } .ds-card p { margin:4px 0 0; color:var(--ink-2, #6e5243); font-size:0.8125rem; font-weight:700; }"
+    },
+    {
+      "name": "Selected Text Block",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "A selected block on the page: ultramarine outline lifted on a tinted shadow; press springs.",
+      "html": "<div class=\"ds-paper\"><span class=\"ds-hit\" tabindex=\"0\">Jane Doe, Senior Designer</span></div>",
+      "css": ".ds-paper { padding:32px; background:#fff; border-radius:4px; box-shadow:0 1px 3px rgb(73 35 14 / 0.1), 0 16px 40px -10px rgb(73 35 14 / 0.28); font-family: Arial, sans-serif; } .ds-hit { display:inline-block; padding:2px 4px; border-radius:6px; background:rgb(59 52 230 / 0.1); box-shadow:0 0 0 2px #3b34e6, 0 10px 22px -8px rgb(59 52 230 / 0.45); cursor:text; transition: transform 260ms cubic-bezier(0.34, 1.32, 0.64, 1), box-shadow 200ms ease; } .ds-hit:active { transform:scale(0.98); box-shadow:0 0 0 2px #3b34e6, 0 3px 8px -4px rgb(59 52 230 / 0.4); } .ds-hit:focus-visible { outline:none; box-shadow:0 0 0 3px #3b34e6, 0 0 0 6px rgb(255 255 255 / 0.9); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Friendly Fixer",
+    "overview": "This is a warm consumer app, not a PDF tool. A pinkish-apricot ground holds the user's own page, centred, large and shadowed like a real sheet of paper; everything else is a soft white card that says in plain words what it is and what will happen. Controls collect into two floating pieces of furniture (a slim file pill at the top, a persistent bottom bar within thumb reach) and a selection card that appears only when something is selected. There is no icon ribbon, no permanent thumbnail sidebar, no properties panel.\n\nThe palette is warm and almost monochrome: apricot ground, white card, warm near-black ink, warm grey secondary text. One saturated ultramarine marks the things you can press and the thing you have selected. Status (a substituted font, a deleted file, an edited block) speaks through ink, icons and plain sentences in a card row, never through extra hues.\n\nType is one rounded humanist sans (Nunito, variable, self-hosted) run at comfortable sizes with heavy weights (800-900) for headings and labels, and tabular figures wherever a number is a measurement. Touch targets never drop below 44px. Motion is soft: entrances ease out, sheets rise from the bottom, and only a press gets a spring.",
+    "keyCharacteristics": [
+      "Apricot ground, white cards, one ultramarine action colour.",
+      "The document is the only large object; chrome floats around it as cards.",
+      "Large soft radii: 20px cards, 28px bar, 999px pills; paper keeps tight 4-6px corners.",
+      "Warm-tinted, diffuse shadows (brown, never grey or black).",
+      "Nunito at heavy weights, tabular figures for sizes and positions.",
+      "44px minimum hit area on every control.",
+      "Spring on press only; ease-out for every entrance."
+    ],
+    "rules": [
+      {
+        "name": "The Pressable Ultramarine Rule",
+        "body": "Ultramarine marks what you can press, what is pressed, and what is selected or focused. Disabled controls lose it entirely (disabled primary falls to Rule Blush on Cocoa Grey). It never colours status, decoration or headings.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Extra Hues Rule",
+        "body": "Status never adds a colour. Substituted fonts, deleted files and edited blocks are told with an icon, ink, a plain sentence and, where needed, a Deep Apricot ring. Changed-block markers are Cocoa Grey dots (a diamond when the font was swapped), never ultramarine.",
+        "section": "colors"
+      },
+      {
+        "name": "The White-Only Faint Rule",
+        "body": "Faint Cocoa (ink-3) passes contrast only on Card White. Never set it on the apricot ground or on Sunk Blush; use Cocoa Grey there.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Measurement Rule",
+        "body": "Any number that is a size, position, zoom, page count or time uses tabular figures (the `num` utility: `font-variant-numeric: tabular-nums`).",
+        "section": "typography"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Interface type is Nunito only; weight does the work a second family would.",
+        "section": "typography"
+      },
+      {
+        "name": "The Page Leads Rule",
+        "body": "Nothing except the paper is large. Chrome lives in floating cards at the edges; panels appear on demand and leave when dismissed.",
+        "section": "layout"
+      },
+      {
+        "name": "The Thumb Bar Rule",
+        "body": "Primary editor actions live in the one bottom bar, with Download as the ultramarine pill at its right end.",
+        "section": "layout"
+      },
+      {
+        "name": "The Warm Shadow Rule",
+        "body": "Shadows are tinted warm brown (rgb 73 35 14), or ultramarine for action and selection. Never neutral grey or black.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the PDF page the only large object; float all chrome as white cards on the apricot ground.",
+      "Do reserve ultramarine (#3b34e6) for pressable, pressed, selected and focused things; strip it from disabled controls.",
+      "Do report status with an icon, ink and one plain sentence in a Sunk Blush note row.",
+      "Do use the spring curve (cubic-bezier(0.34, 1.32, 0.64, 1)) only for `:active` press feedback (scale 0.94-0.98), and the ease-out curve (cubic-bezier(0.16, 1, 0.3, 1)) for every entrance, lift and sheet rise.",
+      "Do keep every control at least 44px in both directions.",
+      "Do tint all shadows warm brown (rgb 73 35 14) or ultramarine for action.",
+      "Do set measurements in tabular figures.",
+      "Do turn all motion off under prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't build an icon ribbon, a permanent thumbnail sidebar or a properties panel.",
+      "Don't introduce extra status hues (no green success, amber warning or red error fills); errors are bold Warm Ink text.",
+      "Don't bounce or spring an entrance; the spring belongs to presses only.",
+      "Don't set Faint Cocoa (#87685a) on the apricot ground or Sunk Blush.",
+      "Don't shift the ground toward cream; it stays pinkish apricot.",
+      "Don't use grey/black or hard-offset shadows.",
+      "Don't use the Ed Sans/Serif/Mono document fonts for interface text."
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<!--
+  Source for the link-preview image (public/og-image.png, 1200×630) and the home-screen
+  icon (public/apple-touch-icon.png, 180×180). Open it through the dev server at
+  /__social.html?a=og or ?a=icon, capture the artboard at the top-left corner at its
+  exact size, and save the PNG into public/. The fonts and colours are the app's own.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Social assets</title>
+<style>
+  @font-face { font-family: 'Nunito Variable'; font-weight: 200 1000; src: url('/fonts/ui/nunito-latin-wght-normal.woff2') format('woff2'); }
+  :root { --ground: #f6dccb; --ink: #2b1d16; --ink-2: #6e5243; --action: #3b34e6; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #fff; }
+  body { font-family: 'Nunito Variable', sans-serif; -webkit-font-smoothing: antialiased; }
+  .artboard { position: absolute; left: 0; top: 0; overflow: hidden; display: none; }
+  body[data-a='og'] #og, body[data-a='icon'] #icon { display: block; }
+
+  /* Link preview */
+  #og { width: 1200px; height: 630px; background: var(--ground); }
+  #og h1 { position: absolute; left: 80px; top: 150px; width: 560px; margin: 0; font-size: 84px; line-height: 1.02; font-weight: 900; letter-spacing: -0.03em; color: var(--ink); }
+  #og .lede { position: absolute; left: 80px; top: 360px; width: 520px; margin: 0; font-size: 30px; line-height: 1.35; color: var(--ink-2); }
+  #og .tags { position: absolute; left: 80px; bottom: 70px; display: flex; gap: 12px; }
+  #og .tags span { padding: 10px 20px; border-radius: 999px; background: #fff; color: var(--ink); font-size: 22px; font-weight: 750; box-shadow: 0 6px 18px -8px rgb(73 35 14 / 0.3); }
+  .sheet { position: absolute; left: 720px; top: 70px; width: 400px; height: 520px; background: #fff; border-radius: 8px; transform: rotate(2.5deg); box-shadow: 0 2px 6px rgb(73 35 14 / 0.12), 0 30px 60px -18px rgb(73 35 14 / 0.38); padding: 52px 44px; }
+  .sheet .t { height: 20px; width: 62%; border-radius: 6px; background: var(--ink); margin-bottom: 22px; }
+  .sheet .l { height: 10px; border-radius: 5px; background: rgb(43 29 22 / 0.22); margin-bottom: 16px; }
+  .sheet .edit { position: relative; margin: 30px -10px 26px; padding: 8px 10px; border-radius: 8px; background: rgb(59 52 230 / 0.1); box-shadow: 0 0 0 3px var(--action), 0 14px 26px -10px rgb(59 52 230 / 0.5); font-size: 26px; font-weight: 800; color: var(--ink); white-space: nowrap; }
+  .sheet .edit::after { content: ''; position: absolute; right: 22px; top: 9px; width: 3px; height: 32px; border-radius: 2px; background: var(--action); }
+  .card { position: absolute; left: 640px; top: 380px; padding: 18px 22px; border-radius: 20px; background: #fff; box-shadow: 0 2px 4px rgb(73 35 14 / 0.08), 0 22px 44px -12px rgb(73 35 14 / 0.35); }
+  .card b { display: block; font-size: 24px; font-weight: 850; color: var(--ink); }
+  .card small { display: block; margin-top: 4px; font-size: 18px; font-weight: 700; color: var(--ink-2); }
+
+  /* Home-screen icon: the favicon drawn full bleed (iOS rounds the corners itself) */
+  #icon { width: 180px; height: 180px; background: var(--action); }
+  #icon svg { display: block; width: 180px; height: 180px; }
+</style>
+</head>
+<body>
+  <section id="og" class="artboard">
+    <h1>Fix the words in your PDF</h1>
+    <p class="lede">Change a name, a date or a typo. The page keeps its own fonts and layout.</p>
+    <div class="tags"><span>No account</span><span>Deleted after 30 min</span><span>Open source</span></div>
+    <div class="sheet" aria-hidden="true">
+      <div class="t"></div>
+      <div class="l" style="width: 44%"></div>
+      <div class="edit">Alex Quinn, Lisbon</div>
+      <div class="l" style="width: 92%"></div>
+      <div class="l" style="width: 84%"></div>
+      <div class="l" style="width: 88%"></div>
+      <div class="l" style="width: 60%"></div>
+      <div class="l" style="width: 90%; margin-top: 34px"></div>
+      <div class="l" style="width: 78%"></div>
+      <div class="l" style="width: 70%"></div>
+    </div>
+    <div class="card" aria-hidden="true"><b>Same font, same place</b><small>Original font · 11 pt · Black</small></div>
+  </section>
+
+  <section id="icon" class="artboard">
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="64" height="64" fill="#3b34e6"/>
+      <path d="M20 11h16l12 12v27a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4V15a4 4 0 0 1 4-4z" fill="#fff"/>
+      <path d="M36 11v8a4 4 0 0 0 4 4h8z" fill="#d9d6ff"/>
+      <rect x="22" y="30" width="17" height="4.5" rx="2.25" fill="#2b1d16"/>
+      <rect x="41" y="27.5" width="3" height="9.5" rx="1.5" fill="#3b34e6"/>
+      <rect x="22" y="40" width="14" height="4.5" rx="2.25" fill="#2b1d16" opacity=".28"/>
+    </svg>
+  </section>
+
+  <script>document.body.dataset.a = new URLSearchParams(location.search).get('a') || 'og'</script>
+</body>
+</html>

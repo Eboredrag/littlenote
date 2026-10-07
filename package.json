@@ -1,0 +1,39 @@
+{
+  "name": "pdfviewer",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.3.14",
+  "engines": {
+    "bun": ">=1.3"
+  },
+  "scripts": {
+    "dev": "bun --bun nuxt dev",
+    "build": "bun --bun nuxt build",
+    "preview": "bun .output/server/index.mjs",
+    "postinstall": "nuxt prepare",
+    "fixtures": "bun tests/make-fixtures.mjs",
+    "test": "bun --bun vitest run",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^1.0.2",
+    "lucide-vue-next": "^1.0.0",
+    "mupdf": "^1.28.1",
+    "nuxt": "^4.5.2",
+    "pdfjs-dist": "^6.4.299",
+    "pinia": "^4.0.3",
+    "reka-ui": "^2.11.0",
+    "unstorage": "^1.17.5",
+    "vue": "^3.5.43",
+    "vue-router": "^5.3.1"
+  },
+  "devDependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "@types/node": "^22.20.5",
+    "pdf-lib": "^1.17.1",
+    "typescript": "~5.9",
+    "vitest": "^5.0.3",
+    "vue-tsc": "^3.3.12"
+  },
+  "license": "AGPL-3.0-or-later"
+}

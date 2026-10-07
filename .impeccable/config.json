@@ -1,0 +1,41 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "bounce-easing",
+        "value": "cubic-bezier(0.34, 1.32, 0.64, 1)",
+        "createdAt": "2026-10-05T14:23:59.993Z",
+        "reason": "Direction contract: the Friendly Fixer world the user picked lists 'spring press feedback'; token is used only for :active press scale, all entrances use --ease-out"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "ed sans",
+        "createdAt": "2026-10-05T16:18:09.212Z",
+        "reason": "Document-content font (bundled Liberation, same file the server embeds) used only to preview typed PDF text; DESIGN.md records it as content, not UI type"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "ed serif",
+        "createdAt": "2026-10-05T16:18:09.235Z",
+        "reason": "Document-content font (bundled Liberation, same file the server embeds) used only to preview typed PDF text; DESIGN.md records it as content, not UI type"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "ed mono",
+        "createdAt": "2026-10-05T16:18:09.255Z",
+        "reason": "Document-content font (bundled Liberation, same file the server embeds) used only to preview typed PDF text; DESIGN.md records it as content, not UI type"
+      },
+      {
+        "rule": "nested-cards",
+        "value": "*",
+        "files": [
+          "design/social.html"
+        ],
+        "createdAt": "2026-10-07T08:33:38.758Z",
+        "reason": "Illustration source for the link-preview image: the 'card in card' is a depiction of a selected line on a PDF page, not app UI; not served to users"
+      }
+    ]
+  }
+}
